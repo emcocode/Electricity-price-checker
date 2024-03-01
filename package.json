@@ -1,0 +1,16 @@
+{
+  "name": "elpriskoll",
+  "version": "1.0.0",
+  "description": "Firstly, make sure you have Git and npm properly installed. Start by cloning this repo. Once the repository is cloned, locate Git Bash (or similar) into the cloned folder. Enter \"npm install\" to install the npm package manager. This will also install the dependencies 'jsdom' and 'fetch-cookie'.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsdom": "^24.0.0"
+  }
+}
