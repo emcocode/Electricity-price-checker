@@ -2,4 +2,9 @@ import Scraper from './src/Scraper.js'
 
 const scraper = new Scraper();
 
-let res = scraper.scrapeLinks("https://data.nordpoolgroup.com/auction/day-ahead/prices?deliveryDate=latest&deliveryAreas=AT,SE4&currency=SEK&aggregation=Daily");
+try {
+  let res = await scraper.getPrice("https://www.elbruk.se/", 4);
+  console.log("The price tomorrow will be: " + res)
+} catch (error) {
+  console.log("The price could not be retrieved.")
+}
