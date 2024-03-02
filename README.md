@@ -1,7 +1,8 @@
-# Web scraper for checking the price of electricity
+# Web scraper for checking the price of electricity in Sweden
 
-Firstly, make sure you have Git and npm properly installed. Start by cloning this repo. Once the repository is cloned, locate Git Bash (or similar) into the cloned folder. Enter "npm install" to install the npm package manager. This will also install the dependencies 'jsdom' and 'fetch-cookie'.
+Firstly, make sure you have Git and npm properly installed. Start by cloning this repo. 
 
-When the installation is complete, please enter the according to the following template into Git Bash (or similar):
+- Run "npm install"
 
-- Run "npm start"
+When the installation is complete, please enter the according to the following template for zones 1-4 into Git Bash (or similar):
+- Run "npm start 4" // for zone SE4
