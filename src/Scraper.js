@@ -23,15 +23,17 @@ export default class Scraper {
       const dom = new JSDOM(html)
       const document = dom.window.document
 
-      const pricesList = document.querySelector('.price-li');
-      const zonePrice = pricesList.querySelectorAll('li')[(zone - 1)].querySelector('span:nth-child(2)').textContent;
+      const pricesList = document.querySelectorAll('.price-li')
+      let prices = []
+      prices[0] = pricesList[1].querySelectorAll('li')[(zone - 1)].querySelector('span:nth-child(2)').textContent
+      prices[1] = pricesList[0].querySelectorAll('li')[(zone - 1)].querySelector('span:nth-child(2)').textContent
 
       console.log(`Scraping for zone SE${zone}...OK`)
-      return zonePrice
+      return prices
     } catch (error) {
       console.error(`Failed to scrape for zone SE${zone}.`)
+      // console.log(error)
       throw error
     }
   }
 }
-
